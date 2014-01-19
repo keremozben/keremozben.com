@@ -1,0 +1,1112 @@
+/* Bu CSS Dosyasi Istanbul Sanayi Odasi icin Gri Creative tarafindan yazilmistir. */
+/* Kerem Ozben - 30.12.2013 | 11:30 */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, select, textarea {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:top;
+	outline:none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1;}
+img {display:block;}
+strong{font-weight:bold;}
+a {text-decoration:none;}
+textarea {resize:none;}
+ol, ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after {content:''; content:none;}
+table {border-collapse:collapse; border-spacing:0;}
+
+.clearfix:after { 
+    visibility:hidden; 
+    display:block; 
+    font-size:0; 
+    content:""; 
+    clear:both; 
+    height:0; 
+}
+* html .clearfix {zoom:1;}
+*:first-child+html .clearfix {zoom:1;}
+
+*::-webkit-input-placeholder{opacity:1; filter:alpha(opacity=100); line-height:25px;}
+*:-moz-placeholder {opacity:1; filter:alpha(opacity=100); line-height:25px;}
+*::-moz-placeholder {opacity:1; filter:alpha(opacity=100); line-height:25px;}
+*:-ms-input-placeholder {opacity:1; filter:alpha(opacity=100); line-height:25px;}
+
+/*Variables*/
+$x94 : #949494;
+$x85 : #858585;
+$x7F : #7f7f7f;
+$x50 : #505050;
+$x53 : #535353;
+$x39 : #393939;
+$xD8 : #d8d8d8;
+$x9C : #9c9c9c;
+$red : #ed1c24;
+$grey : #f0f0f0;
+$green : #6fc63a;
+$blue : #35acff;
+$navy : #244da1;
+$brown : #988453;
+$white : #fff;
+$black : #000;
+
+/*Mixins*/
+@mixin ProximaBoldCond{font-family:'ProximaNovaCond-Bold', "Trebuchet MS", Helvetica, sans-serif; font-weight:normal;}
+@mixin ProximaBold{font-family:'ProximaBold', "Trebuchet MS", Helvetica, sans-serif; font-weight:normal;}
+@mixin sprite($x, $y){background:url(../_img/sprite.png) $x $y no-repeat;}
+@mixin fontSize($fs){font-size:( $fs / 12 ) + em;}
+@mixin radius($px){
+	-webkit-border-radius:$px;
+	-moz-border-radius:$px;
+	-ms-border-radius:$px;
+	-o-border-radius:$px;
+	border-radius:$px;
+}
+@mixin transition($trs){
+	-webkit-transition:$trs;
+	-moz-transition:$trs;
+	-ms-transition:$trs;
+	-o-transition:$trs;
+	transition:$trs;
+}
+@mixin transform($trs){
+	-webkit-transform:$trs;
+	-moz-transform:$trs;
+	-ms-transform:$trs;
+	-o-transform:$trs;
+	transform:$trs;
+}
+
+.noMarginLeft{margin-left:0 !important;}
+.noMarginRight{margin-right:0 !important;}
+.noPadding{padding:0 !important;}
+
+.fLeft{float:left !important;}
+.fRight{float:right !important;}
+
+.responsive{display:none;}
+
+.grid{float:left; margin:0 10px;}
+
+.grid_1{width:23.728813559322035%;}
+.grid_2{width:49.152542372881356%;}
+.grid_3{width:74.57627118644068%;}
+.grid_4{width:100%;}
+
+/*Real Code Starts*/
+html, body, #mainCapsule{width:100%; height:100%;}
+body{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold;}
+body > #mainCapsule{height:auto; width:100%;}
+
+#overlay{width:100%; height:1767px; position:fixed; top:0; left:0; z-index:9; background:url(../_img/0x50.png) 0 0 repeat; display:none;
+	&.visible{display:block;}
+	&.fromFooter{z-index:12;}
+}
+
+.box{background:$grey; height:60px; padding:20px; margin-bottom:20px; position:relative;
+	h2{@include fontSize(19); color:$red; @include ProximaBoldCond;}
+	.seeAll{position:absolute; color:$x94; top:25px; right:20px; @include fontSize(10); @include ProximaBoldCond; display:block; padding-right:25px; @include sprite(61px, -611px);}
+	.seperator{width:100%; height:10px; display:block; background:url(../_img/repeat-border.gif) 0 0 repeat; margin:15px 0;}
+	.box-slider{position:relative;
+		> a{width:18px; height:18px; display:block; text-indent:-9999px; position:absolute; top:50%; margin-top:-9px;}
+		.box-slide-prev{@include sprite(-1px, -869px); left:-9px;
+			&:hover{background-position:-31px -869px;}
+		}
+		.box-slide-next{@include sprite(-1px, -949px); right:-9px;
+			&:hover{background-position:-31px -949px;}
+		}
+		.box-slide-inner{position:relative; overflow:hidden;
+			ul{position:absolute; top:0; left:0;}
+		}
+	}
+	.box-btn{@include radius(10px); @include ProximaBoldCond; @include fontSize(11); display:block;
+		&.btn-red{@include sprite(55px, -666px); background-color:$red; color:$white; padding:5px 45px 5px 10px;}
+		&.btn-grey{@include sprite(60px, -666px); background-color:$x94; color:$white; padding:5px 35px 5px 20px; width:35px; @include radius(0 10px 10px 0);}
+		&:hover{opacity:0.7; filter:alpha(opacity=70);}
+	}
+	.box-slide-nav{
+		li{float:left;
+			a{width:6px; height:6px; display:block; text-indent:-9999px; margin-right:3px; @include sprite(-9px, -1134px);
+				&:hover, &.on{background-position:0 -1134px;}
+			}
+		}
+	}
+}
+
+/*Header*/
+#headerCapsule{padding:20px 0; position:relative; z-index:10; width:100%; background:url(../_img/repeat-menu-bg.gif) 0 140px repeat-x;
+	#header{width:1180px; margin:0 auto; position:relative;}
+}
+	#logo{float:left; margin-bottom:20px;
+		a{width:111px; height:100px; display:block; text-indent:-9999px;  @include sprite(0,0);}
+	}
+	#english{float:right;
+		p{color:$x85; line-height:12px;
+			a{color:$x50; text-decoration:underline;}
+		}
+	}
+	#menuAndSearch{clear:both;
+		#menu{height:50px;
+			> li{float:left; position:relative; border-left:2px solid #e11b22; background:$red;
+				> a{@include fontSize(19); @include ProximaBoldCond; line-height:19px; color:$white; padding:16px 0 15px 0; display:block; text-align:center;}
+				&#mnUyeFirmalar a{padding-right:40px; @include sprite(154px, -513px); border-right:2px solid #e11b22;}
+				.subMenu{display:none; position:absolute; left:0; top:50px; border-bottom:10px solid $red; background:#6b6b6b; z-index:5;
+					ul{padding:20px 30px;
+						li{float:left; width:50%; padding:10px 0; list-style-type:none; list-style-image:url(data:0);
+							a{@include fontSize(13); color:$white; display:block; padding-left:30px; @include sprite(0, -609px);
+								&:hover{color:#ddd;}
+							}
+						}
+					}
+				}
+				&:hover{background-color:#6b6b6b;
+					.subMenu{display:block;}
+				}
+				&.on{background-color:#6b6b6b;}
+				&#mnAnasayfa{width:153px;}
+				&#mnKurumsal{width:150px;}
+				&#mnHizmetler{width:147px;}
+				&#mnProjeler{width:139px;}
+				&#mnMeslekKomiteleri{width:218px;}
+				&#mnISOVakfi{width:137px;}
+				&#mnUyeFirmalar{width:220px;}
+			}
+		}
+		#topMenu{position:absolute; top:35px; right:280px;
+			li{float:left;
+				&#tmnBilgiEdinme a{@include sprite(0, -325px);}
+				&#tmnBasin a{@include sprite(0, -238px);}
+				&#tmnIletisim a{@include sprite(0, -152px);}
+				a{@include fontSize(14); color:$x39; height:50px; display:block; line-height:50px; padding-left:38px; padding-right:30px; @include ProximaBoldCond;}
+			}
+		}
+		#search{position:absolute; top:35px; right:0; width:276px; height:46px; border:2px solid #b0b0b0; @include radius(30px); overflow:hidden;
+			input{padding:20px; color:$x7F; @include fontSize(18); padding:11.5px 18px; @include radius(30px); float:left; @include ProximaBoldCond;}
+			a{width:30px; height:30px; display:block; text-indent:-9999px; @include sprite(0, -423px); float:right; margin:12px 5px 0 0;}
+		}
+	}
+
+#contentCapsule{width:1180px; margin:0 auto;}
+
+/*Anasayfa*/
+#AnaHaberler{height:390px; position:relative; z-index:12;
+	&.over{z-index:9;}
+	#HaberListe{float:left; width:300px; position:relative; z-index:2; padding:15px 0; position:relative; background:url(../_img/haber-list-bg.gif) 0 0 no-repeat;
+		li{height:40px; padding:0 20px; position:relative; z-index:5;
+			a{display:block; height:40px; line-height:40px; color:$x53;}
+			&.on{
+				a{color:$white; background:none;}
+			}
+			&#lavalamp{background:url(../_img/haber-over.png) right 0 no-repeat; height:40px; width:320px; position:absolute; top:15px; left:0; z-index:4; padding:0; @include transition(top 1s ease 0s);}
+			&:nth-child(9).on ~ #lavalamp{top:335px;}
+			&:nth-child(8).on ~ #lavalamp{top:295px;}
+			&:nth-child(7).on ~ #lavalamp{top:255px;}
+			&:nth-child(6).on ~ #lavalamp{top:215px;}
+			&:nth-child(5).on ~ #lavalamp{top:175px;}
+			&:nth-child(4).on ~ #lavalamp{top:135px;}
+			&:nth-child(3).on ~ #lavalamp{top:95px;}
+			&:nth-child(2).on ~ #lavalamp{top:55px;}
+			&:nth-child(1).on ~ #lavalamp{top:15px;}
+		}
+		#lavalamp.child-9{top:335px;}
+		#lavalamp.child-8{top:295px;}
+		#lavalamp.child-7{top:255px;}
+		#lavalamp.child-6{top:215px;}
+		#lavalamp.child-5{top:175px;}
+		#lavalamp.child-4{top:135px;}
+		#lavalamp.child-3{top:95px;}
+		#lavalamp.child-2{top:55px;}
+		#lavalamp.child-1{top:15px;}
+	}
+	#bb-bookblock{width:580px; height:100%; position:relative; z-index:1; margin:0 0 0 300px;
+		.bb-item-inner{position:relative; height:390px;
+			.bb-text{position:absolute; @include fontSize(30); @include ProximaBoldCond; bottom:15px; left:30px; display:block; @include sprite(465px, -1023px); color:$white; width:90%; padding:15px 0; z-index:1;}
+			.shadow{width:100%; height:169px; position:absolute; bottom:0; left:0; background:url(../_img/haber-golge.png) 0 bottom no-repeat;}
+		}
+	}
+	.HaberLoader{position:absolute; bottom:0; left:0; display:block; height:5px; background:$red; z-index:3; width:0;}
+}
+
+#Baskandan{height:100px;
+	.bordered-bg{width:270px; height:90px; background:url(../_img/repeat-border.gif) 0 0 repeat; position:absolute; right:0; bottom:0;
+		p{padding:10px; line-height:15px;
+			a{color:$x39;
+				&:hover{text-decoration:underline;}
+			}
+		}
+		img{ position:absolute; right:0; bottom:0;}
+	}
+}
+
+#Yayinlarimiz{height:190px;
+	.box-slide-inner{width:220px; height:150px; margin:0 auto;
+		ul{width:440px; /*TODO : Auto calculate*/
+			li{width:220px; float:left;
+				img{float:left;}
+				p{float:left; width:100px; line-height:17px; padding:20px 0;}
+				a{float:left;}
+			}
+		}
+	}
+}
+#Haberler{height:180px;
+	.box-slide-inner{width:240px; height:120px; margin:0 auto;
+		ul{width:480px; /*TODO : Auto calculate*/
+			li{width:240px; float:left;
+				> a{float:left; margin-right:20px; display:block;}
+				h3{float:left; width:130px; @include fontSize(19); line-height:20px; padding-bottom:5px; @include ProximaBoldCond;
+					a{color:$x39;}
+				}
+				p{float:left; width:130px; @include fontSize(11); line-height:15px;
+					a{color:$x94;}
+				}
+			}
+		}
+	}
+	.box-slide-nav{position:absolute; bottom:0; left:110px;}
+}
+#Duyurular{height:180px;
+	.duyuru{margin-bottom:20px;
+		p{@include fontSize(12); line-height:15px; padding-bottom:10px;
+			a{color:$x39;}
+		}
+		span{@include fontSize(11); color:$x94; float:left; display:block;}
+		> a{float:right; display:block; text-indent:-9999px; @include sprite(0, -733px); width:30px; height:8px;}
+	}
+}
+#IsoDergi{height:60px;
+	.fLeft{width:115px;
+		p{@include ProximaBoldCond; @include fontSize(13); color:$x39; padding-top:5px;}
+		.box-btn{margin:10px 0 0 -20px;}
+	}
+	.dergi-gorsel{width:145px; height:100px; position:relative; background:url(../_img/repeat-border.gif) 0 0 repeat; margin:-20px -20px 0 115px;
+		img{position:absolute; top:10px; right:0;}
+	}
+}
+#SemEgtSis{height:60px; position:relative;
+	img{position:absolute; top:0; left:0; z-index:1;}
+	.box-btn{margin:6px 0 0 -20px;}
+	.box-btn, h2{position:relative; z-index:2;}
+}
+#EtkTakvim{height:420px;
+	/*Takvim ile alakali css'ler clndr.css dosyasina yazildi.*/
+}
+#BuHafta{height:60px;
+	h2{background:url(../_img/repeat-border.gif) 0 0 repeat; padding:15px 20px; margin:-20px -20px 0 -20px;}
+	ul{
+		li{padding-top:8px;
+			a{@include fontSize(12); color:$x39; display:inline-block; background:url(../_img/ekonomi-ok.png) right center no-repeat; padding-right:25px;}
+		}
+	}
+}
+#SanatGal{height:60px;
+	.fLeft{width:115px;
+		p{@include ProximaBoldCond; @include fontSize(13); color:$x39; padding-top:5px;}
+		.box-btn{margin:10px 0 0 -20px;}
+	}
+	.sanat-gorsel{width:145px; height:100px; position:relative; background:url(../_img/repeat-border.gif) 0 0 repeat; margin:-20px -20px 0 115px;
+		img{position:absolute; top:-3px; right:0;}
+	}
+}
+#Banner{height:180px;
+	img{margin:-20px 0 0 -20px;}
+}
+
+	#content{padding-bottom:30px;}
+	
+#footerCapsule{width:1180px; margin:0 auto; padding-bottom:80px;}
+	#footerLinks{padding-bottom:30px; margin-bottom:30px; border-bottom:1px solid #f0f0f0;
+		ul{
+			li{float:left; height:70px;
+				&#fmnCevre{width:230px; @include sprite(0, -1270px);
+					a{color:$green;}
+				}
+				&#fmnInovasyon{width:260px; @include sprite(0, -1360px);
+					a{color:$red;}
+				}
+				&#fmnTeknoloji{width:285px;  @include sprite(0, -1450px);
+					a{color:$blue; line-height:20px; padding-top:17px;}
+				}
+				&#fmnAvrupa{width:260px;  @include sprite(0, -1540px);
+					a{color:$navy;}
+				}
+				&#fmnISO500{width:145px;  @include sprite(0, -1630px);
+					a{color:$brown;}
+				}
+				a{@include fontSize(17); @include ProximaBoldCond; line-height:70px; display:block;  padding-left:80px;}
+			}
+		}
+	}
+	#footerMenu{
+		> ul {
+			> li{float:left; width:170px;
+				&#sec-1{width:110px;}
+				&#sec-2{width:260px;}
+				&#sec-3{width:250px;}
+				&#sec-4{width:212px;}
+				> a{@include fontSize(15); color:#797979; display:block; padding-bottom:10px; @include ProximaBoldCond;
+					&:hover{color:#575757;}
+				}
+				ul{
+					li{
+						a{@include fontSize(12); color:#aeaeae; display:block; padding-bottom:10px;
+							&:hover{color:$x9C;}
+						}
+					}
+				}
+			}
+		}
+	}
+	#footerSub{margin-top:35px; background:#f0f0f0; padding:10px 20px; position:relative;
+		#footerText{float:left; padding-top:10px;
+			ul{
+				li{float:left; margin-right:20px; padding-bottom:10px;
+					p{color:#707070;}
+					a{@include fontSize(11); color:#707070; text-decoration:underline;}
+				}	
+			}
+			p{@include fontSize(11); color:$x94;}
+			#gricreative{width:10px; height:93px; display:block; text-indent:-9999px; @include sprite(-4px, -2691px); position:absolute; right:-15px; top:-210px;}
+		}
+		#footerLogos{
+			ul{
+				li{float:left; margin-left:25px;
+					a{display:block; height:50px; text-indent:-9999px;}
+					&#fmnTOBB a{width:50px; @include sprite(-9px, -2380px);}
+					&#fmnAkreditasyon a{width:56px; @include sprite(-83px, -2380px);}
+					&#fmnISO9001 a{width:51px; @include sprite(-162px, -2380px);}
+				}
+			}
+		}
+	}
+
+#stickyFooter{width:100%; position:fixed; bottom:0; left:0; background:$black; border-top:2px solid $red; height:40px; padding:10px 0; z-index:20;}
+	#footerContainer{width:1180px; margin:0 auto;
+		.onlineHizmetler{float:left;
+			> a{height:40px; width:205px; display:block; line-height:40px; color:$white; background:$red; position:relative; padding-left:15px; @include fontSize(18); @include ProximaBoldCond;
+				i{width:40px; height:40px; display:block; content:""; position:absolute; top:0; right:0; @include sprite(3px, -2288px); background-color:#c50000;}
+			}
+			&.on{
+				> a{padding-top:10px; margin-top:-10px;
+					i{top:10px; background-position:3px -3008px;}
+				}
+				.ohWrap{display:block;}
+			}
+			.ohWrap{position:absolute; display:none; width:100%; bottom:62px; left:0; background:$red; height:140px;
+				.ohMenu{width:1180px; margin:0 auto;
+					li{float:left; padding:30px 0;
+						a{@include ProximaBoldCond; @include fontSize(21); color:$white; display:block; padding:20px 0 0 90px; position:relative;
+							i{width:80px; height:80px; position:absolute; display:block; content:""; top:0; left:0; @include radius(5px);}
+						}
+						&#ohmE-Oda{width:330px;
+							i{@include sprite(0, -1761px); background-color:#c50000;}
+						}
+						&#ohmUyeFirmalar{width:280px;
+							i{@include sprite(0, -1891px); background-color:#c50000;}
+						}
+						&#ohmSemEgtSis{width:320px;
+							i{@include sprite(0, -2010px); background-color:#c50000;}
+						}
+						&#ohmIndirim{width:250px;
+							i{@include sprite(0, -2131px); background-color:#c50000;}
+						}
+					}
+				}
+			}
+		}
+		#social{float:right; width:317px; margin-top:4px;
+			#eBultenBox{float:left; width:105px; height:28px; border:2px solid #4e4e4e; @include radius(20px); @include sprite(85px, -662px); background-color:#333; @include ProximaBoldCond; @include fontSize(12); color:$white; padding-left:15px; line-height:28px; display:block;}
+			> ul{width:185px; float:right;
+				li{float:left; margin-left:5px;
+					a{width:32px; height:32px; display:block; text-indent:-9999px;}
+					&#fb a{@include sprite(-10px, -2534px);
+						&:hover{background-position:-10px -2494px;}
+					}
+					&#tw a{@include sprite(-47px, -2534px);
+						&:hover{background-position:-47px -2494px;}
+					}
+					&#yt a{@include sprite(-84px, -2534px);
+						&:hover{background-position:-84px -2494px;}
+					}
+					&#rss a{@include sprite(-121px, -2534px);
+						&:hover{background-position:-121px -2494px;}
+					}
+					&#share a{@include sprite(-158px, -2534px);}
+				}
+			}
+		}
+	}
+
+/*Subpage Template*/
+#leftPart{width:880px; margin-right:20px; float:left; background:#f0f0f0;
+	&.wide{width:100%; margin:0;
+		.wide-seperator{float:left; width:40%;
+			&:first-child{width:60%;}
+		}
+	}
+	.submit{width:120px; height:30px; padding-left:10px; background:url(../_img/beyaz-ok.png) $red right center no-repeat; color:#fff; @include ProximaBoldCond; @include fontSize(16); @include radius(20px); text-align:left;}
+	table{
+		tr{
+			td{padding-bottom:10px; width:300px;
+				&:last-child{padding-left:20px;}
+				&.single{padding:0;
+					.controller{width:698px;}
+				}
+				.controller{border:1px solid #d9d9d9; @include radius(2px); margin-bottom:10px; width:328px; padding:7px;
+					input[type="text"]{@include fontSize(18); line-height:18px; color:$x39; width:100%;}
+					input[type="radio"]{}
+					&.radio{border:0 none; padding:0; width:50%; margin-top:10px;
+						label{margin:0 !important; line-height:18px;}
+					}
+					&.imza{
+						input{@include sprite(300px, -4562px);}
+					}
+				}
+				p{padding-bottom:0 !important;}
+				.fake{opacity:0; visibility:hidden; height:0; width:0;}
+			}
+		}
+	}
+	#contentArea{padding:40px;
+		#pageSection{
+			#pageInfo{float:left;
+				h1{@include ProximaBoldCond; @include fontSize(45); color:#484848; line-height:35px; padding-bottom:15px;}
+				#breadCrumb{margin-bottom:30px;
+					li{float:left; padding-left:30px; margin-left:15px;  background:url(../_img/ekonomi-ok.png) 0 center no-repeat;
+						&.homePage{padding:0; margin:0; background:none;}
+						a{@include fontSize(12); color:#535353;}
+					}
+				}
+			}
+			.pageTools{float:right; width:160px;
+				.textResize{width:90px; padding:0 10px; background:$white; float:left;
+					li{float:left;
+						a{width:30px; height:40px; display:block; text-indent:-9999px;}
+						&#trSmall{
+							a{@include sprite(-10px, -3233px);}
+						}
+						&#trNormal{
+							a{@include sprite(-40px, -3233px);}
+						}
+						&#trLarge{
+							a{@include sprite(-70px, -3233px);}
+						}
+					}
+				}
+				> a{float:left; width:40px; height:40px; display:block; text-indent:-9999px; background-color:$white; margin-left:10px; @include sprite(-120px, -3233px);}
+			}
+			.seperator{width:100%; height:10px; display:block; background:url(../_img/repeat-border.gif) 0 0 repeat; margin-bottom:30px; clear:both;}
+		}
+		#innerContent{padding:40px; background:$white;
+			&.flat{padding:0; background:none;}
+			.content-list{
+				> li{padding-bottom:39px; border-bottom:1px solid #f2f2f2; margin-bottom:40px;
+					.list-image{float:left; width:180px; margin-right:40px;}
+					.list-content{float:left; width:500px;
+						h2{@include fontSize(20); color:#1862ab; padding-bottom:15px;}
+						ul{margin-bottom:10px;
+							li{float:left; @include fontSize(14); color:#35acff; padding-left:20px; line-height:15px;
+								&.list-item-date{@include sprite(-10px, -3087px );}
+								&.list-item-type{@include sprite(0, -3158px); margin-left:15px; padding-left:35px; border-left:1px solid #1862ab;}
+							}
+						}
+						p{@include fontSize(13); color:$x39; line-height:29px;}
+						> a{@include radius(20px); height:20px; padding:10px 45px 0 15px; @include ProximaBoldCond; @include fontSize(11); display:inline-block; color:$white; margin-top:22px; background:url(../_img/beyaz-ok.png) right center no-repeat; background-color:$red;
+							&:hover{background-color:#dd0000;}
+						}
+					}
+				}
+			}
+			#article{
+				h2{@include fontSize(23); color:#1862ab; padding-bottom:15px;}
+				h3{@include fontSize(17); color:#1862ab; padding-bottom:20px;}
+				h4{@include fontSize(13); color:#1862ab; padding-bottom:5px;}
+				h5{}
+				h6{@include fontSize(13); color:#484848; padding-bottom:10px;}
+				#article-info{margin-bottom:10px; margin-left:0;
+					li{float:left; @include fontSize(14); color:#35acff; padding-left:20px; line-height:15px; padding-bottom:0;
+						&.article-date{@include sprite(-10px, -3087px );}
+						&.article-type{@include sprite(0, -3158px); margin-left:15px; padding-left:35px; border-left:1px solid #1862ab;}
+					}
+				}
+				ol{list-style-type:decimal; list-style-position:inside; margin-left:15px; margin-top:10px;
+					li{font-weight:normal; padding-bottom:5px;}
+				}
+				p, li{@include fontSize(13); line-height:22px; color:#535353;}
+				p{padding-bottom:20px;
+					&.not{width:360px; padding-bottom:9px; border-bottom:1px solid #ccc; margin-bottom:10px;}
+				}
+				.list{margin:0 0 30px 35px;
+					> li{padding:0 0 10px 15px; background:url(../_img/list-square-6x6.gif) 0 8px no-repeat;
+						a{color:#535353; background:url(../_img/wide-list-underline.gif) 0 bottom repeat-x; display:inline-block;}
+					}
+					&.dark{margin-bottom:10px;
+						li{background:url(../_img/list-square-dark.gif) 0 10px no-repeat;}
+					}
+					&.noLeft{margin-left:0;}
+				}
+				.wide-seperator{
+					.list{margin-left:0; margin-right:35px;}
+				}
+				.article-image{margin-bottom:40px;
+					&.fLeft{margin-right:40px;}
+					&.fRight{margin-left:40px;}
+					&.full{width:100%;}
+				}
+				.info{padding:20px 100px 20px 30px; margin-bottom:40px; background:url(../_img/info.png) #fff9ba 97% 20px no-repeat;
+					p{@include fontSize(14); font-weight:normal; color:#cdb357; line-height:18px; padding:0;}
+				}
+				.akordiyon{
+					dt{
+						a{display:block; height:59px; padding-left:10px; line-height:59px; @include fontSize(16); color:#535353; @include sprite(690px, -4386px); border-bottom:1px solid #cfcfcf;
+							&.on{@include sprite(690px, -4315px); color:$red;}
+						}
+					}
+					dd{padding:30px 20px 0 20px; display:none;
+						h3{}
+						ol{margin-top:0; margin-bottom:20px;}
+					}
+				}
+				.sanayi-500{
+					img{border:1px solid #d9d9d9; margin-bottom:30px;}
+					.box-btn{display:block; margin:0 auto 20px auto; color:#fff; @include fontSize(15); @include ProximaBoldCond; width:165px; height:40px; line-height:42px; @include radius(20px); padding-left:15px;
+						&.btn-red{@include sprite(150px, -4030px); background-color:$red;}
+						&.btn-blue{@include sprite(150px, -4108px); background-color:#1862ab;}
+						&:hover{opacity:0.7; filter:alpha(opacity=70);}
+					}
+				}
+				#members{width:800px; margin-left:-40px;
+					.member{float:left; text-align:center; margin-bottom:40px; position:relative;
+						&.mem-1{width:100%; margin-bottom:0;}
+						&.mem-2{width:50%; margin-bottom:60px;}
+						&.mem-3{width:33.3333333333%; margin-bottom:60px;}
+						&.mem-4{width:25%;}
+						&.mem-5{width:20%;}
+						&.mem-last{margin-bottom:0 !important;}
+						img{width:109px; height:109px; margin:0 auto 10px auto;}
+						p{@include fontSize(16); color:$red; padding-bottom:5px;}
+						span{@include fontSize(12); color:#6e6e6e; padding-bottom:15px; display:block;}
+						.mask{width:110px; height:110px; background:url(../_img/mask.png) 0 0 no-repeat; position:absolute; top:0; left:50%; margin-left:-55px;}
+						ul{width:140px; margin:0 auto;
+							li{float:left; width:50%; text-align:left;
+								&.member-contact{@include sprite(0, -3751px);}
+								&.member-cv{@include sprite(0, -3827px);}
+								a{@include fontSize(10); color:#535353; display:inline-block; margin-left:20px; line-height:15px; text-align:left; background:url(../_img/wide-list-underline.gif) 0 bottom repeat-x;}
+							}
+						}
+					}
+					&.hoverable{
+						.member{ height:160px; padding:30px 0; margin-bottom:0;
+							ul{display:none; width:170px; margin:0 auto;
+								li{float:none; width:auto; @include fontSize(12); @include ProximaBoldCond; text-align:left; padding-left:30px;
+									a{margin:0;}
+									&.member-phone{@include sprite(0, -3896px); padding-bottom:5px;}
+									&.member-mail{@include sprite(0, -3968px); @include fontSize(13);}
+								}
+							}
+							.mask{top:30px; background:url(../_img/mask.png) 0 0 no-repeat;}
+							.phone{width:15px; height:10px; @include sprite(-3px, -4197px); display:inline-block; margin-right:5px;}
+							.email{width:15px; height:10px; @include sprite(-3px, -4268px); display:inline-block; margin-left:5px;}
+							&:hover{background:#e3e3e3;
+								p, span{display:none;}
+								ul{display:block;}
+								.mask{background:url(../_img/mask-3.png) 0 0 no-repeat;}
+								.phone, .email{display:none;}
+							}
+						}
+					}
+				}
+				.yayinlar-books{width:720px; height:270px; position:relative;
+					.yb-container{width:720px; height:270px; position:relative;
+						.yb-item{width:720px; position:absolute; top:20px; left:0;
+							.yb-book-cover{width:200px; margin-right:20px; float:left; position:relative;}
+							.kitap-golge{width:270px; height:28px; background:url(../_img/kitap-golge.png) 0 0 no-repeat; position:absolute; bottom:-20px; left:-20%; z-index:0;}
+							.yb-book-text{width:500px; float:left;
+								h3{@include fontSize(22); color:$x39;}
+								p{}
+								span{color:$red; display:block; padding-bottom:30px;
+									i{font-weight:normal;}
+								}
+								a{@include radius(20px); @include ProximaBoldCond; @include fontSize(11); display:inline-block;
+									&.btn-red{background-color:$red; color:$white; padding:10px 45px 10px 15px;}
+									&.btn-buy{background-image:url(../_img/beyaz-ok.png); background-position:right center; background-repeat:no-repeat;}
+									&.btn-download{background-image:url(../_img/indir-ok.png); background-position:right center; background-repeat:no-repeat;}
+									&:hover{opacity:0.7; filter:alpha(opacity=70);}
+								}
+							}
+						}
+						#yb-pager{position:absolute; bottom:0; right:-40px; z-index:2; background:url(../_img/repeat-border-white.gif) 0 0 repeat; padding:10px 15px;
+							ul{
+								li{float:left; margin:0 5px;
+									a{width:30px; height:30px; display:block; text-align:center; line-height:30px; background:$red; @include radius(20px); color:$white; @include fontSize(15);
+										&:hover, &.on{background-color:#535353;}
+									}
+								}
+							}
+						}
+					}
+					&.block{height:auto;
+						.yb-container{height:auto;
+							.yb-item{position:static; padding-top:49px; margin-top:50px; border-top:1px solid #f2f2f2;
+								&:first-child{padding:0; margin:0; border:0 none;}
+							}
+						}
+					}
+				}
+				.video-gallery{margin-top:0;
+					.video-item{width:360px; margin-right:0;
+						&:before, &:after{display:none;}
+						.video-text{width:140px; padding-left:20px; padding-top:10px;
+							p{font-size:16px; color:#393939; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold; line-height:20px;}
+						}
+					}
+				}
+				.basin-bulten{padding:20px 0 20px 10px; border-top:1px solid #cfcfcf;
+					&:first-child{border-top:0 none; padding-top:0;}
+					p{padding-bottom:0; line-height:20px; @include fontSize(16);}
+					> .fRight{width:130px; margin-top:10px;
+						a{@include fontSize(12); color:#bdbdbd; display:block; @include sprite(0, -4483px); padding-left:30px; line-height:20px;
+							&.bb-pdf{}
+							&.bb-jpg{}
+						}
+					}
+				}
+			}
+		}
+		#pagination{margin:20px 0 40px 0;
+			#pages{background:$red; @include radius(20px); padding:5px 15px; float:left;
+				li{float:left;
+					a{width:20px; height:20px; display:block; text-align:center; color:$white; @include fontSize(13); line-height:20px; margin:0 1px; @include radius(20px);
+						&:hover, &.on{background:#6B6B6B;}
+					}
+				}
+			}
+			#pagination-nav{float:right;
+				li{float:left;
+					a{width:50px; height:30px; text-indent:-9999px; display:block; @include radius(20px);}
+					&#pnPrev{margin-right:10px;
+						a{@include sprite(15px, -3322px); background-color:$red;
+							&:hover{background-color:#db0000;}
+						}
+					}
+					&#pnNext{
+						a{@include sprite(15px, -661px); background-color:$red;
+							&:hover{background-color:#db0000;}
+						}
+					}
+				}
+			}
+		}
+		#pageSocial{}
+		.image-gallery{margin-top:40px;
+			.image-gallery-nav{float:right;
+				a{width:12px; height:20px; display:block; text-indent:-9999px; float:left;
+					&.ig-nav-prev{@include sprite(0, -3468px);}
+					&.ig-nav-next{@include sprite(-69px, -3468px);}
+				}
+				span{width:56px; display:block; text-align:center; @include fontSize(26); color:$x39; @include ProximaBoldCond; float:left; line-height:20px;
+					sup{font-size:14px; line-height:12px;}
+				}
+			}
+			h3{float:left; @include fontSize(26); color:$x39; @include ProximaBoldCond;}
+			.image-gallery-contaniner{margin-top:15px; position:relative; overflow:hidden; width:100%; height:81px;
+				.image-gallery-slider{position:absolute; top:0; left:0; width:1000px; height:81px;
+					li{float:left; width:140px; padding:3px; background:$white; border:1px solid #d9d9d9; margin-right:15px;
+						a{}
+					}
+				}
+			}
+		}
+		.video-gallery{margin-top:40px;
+			.video-item{float:left; width:380px; position:relative; z-index:3; margin-bottom:40px;
+				&:first-child{margin-right:40px;}
+				&:before, &:after{width:198px; height:138px; display:block; content:""; position:absolute; border:1px solid #d9d9d9; background:$white;}
+				&:before{z-index:-1; bottom:-2px; left:4px;}
+				&:after{z-index:-2; bottom:-7px; left:8px; visibility:visible; z-index:-3;}
+				.video-thumb{float:left; display:block; position:relative; padding:3px; border:1px solid #d9d9d9; background:$white;
+					span{position:absolute; top:0; left:0; width:100%; height:100%; display:block; background:url(../_img/video-play.png) center center no-repeat;}
+				}
+				.video-text{float:left; width:150px; padding:20px 0 0 30px;
+					p{@include ProximaBoldCond; @include fontSize(24); line-height:30px; color:$x39; padding-bottom:20px;}
+					a{@include fontSize(13); color:$red; text-decoration:underline;}
+				}
+			}
+		}
+		#article-notes{margin-top:40px;
+			.article-note{margin-bottom:10px; padding:15px 20px; background:$white; border:1px solid #d9d9d9; position:relative;
+				p{float:left; @include fontSize(13); color:$red; text-decoration:underline; line-height:18px;}
+				a{float:right; @include fontSize(11); color:$x39; display:block; padding-right:60px; text-decoration:underline; padding-top:5px;}
+				.attach{@include sprite(-1px, -3547px); width:46px; height:46px; display:block; text-indent:-9999px; position:absolute; top:-5px; right:10px; padding:0;}
+				&:after{content:""; display:block; width:104.2%; height:3px; background:$white; border-left:1px solid #d9d9d9; border-right:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9; position:relative; visibility:visible; bottom:-20px; left:0; margin-left:-17px;}
+			}
+		}
+		.block-content{margin-top:20px;
+			.box{width:350px; height:auto; background:$white; float:left;
+				.seperator{background:url(../_img/repeat-border-white.gif) 0 0 repeat;}
+				&:first-child{margin-right:20px;}
+				ul{
+					li{margin-top:15px;
+						&:first-child{margin-top:0;}
+						a{@include fontSize(13); line-height:22px; font-weight:normal; color:$x39; display:block; padding-left:30px; background:url(../_img/ekonomi-ok.png) left 7px no-repeat;}
+					}
+				}
+			}
+		}
+		.list-logo{
+			> li{float:left; width:220px; margin-right:30px;
+				&.last{margin-right:0;}
+				&:nth-child(3n){margin-right:0;}
+				p{@include fontSize(14); color:#595959; padding-bottom:15px;}
+				img{border:1px solid #d9d9d9; margin-bottom:10px;}
+				ul{margin-bottom:40px;
+					li{margin-bottom:10px;
+						a{height:20px; display:inline-block; position:relative; line-height:20px; margin-left:35px; @include fontSize(12); color:#535353; background:url(../_img/wide-list-underline.gif) 0 bottom repeat-x;
+							span{width:21px; height:20px; display:block; position:absolute; top:0; left:-35px; text-align:center; background:#7f7f7f; color:#fff; @include radius(3px); @include fontSize(8);}
+							&:hover{color:$red;
+								span{background:#C50000;}
+							}
+						}
+					}
+				}
+			}
+		}
+		#iso-dergi{
+			#iso-dergi-text{position:relative; border-bottom:2px solid #d8d8d8; padding:0 0 30px 0; margin-bottom:30px;
+				#iso-yil{width:760px;
+					.select-title{@include fontSize(16); line-height:40px; color:$red; float:left; padding-bottom:40px;}
+					.controller{float:left; position:relative; width:200px; height:40px; margin-left:20px;}
+				}
+				#iso-dergi-gorsel{position:absolute; bottom:0; right:60px;}
+			}
+			#iso-dergi-sayilar{width:1180px; margin-left:-40px;
+				p{color:$red; @include fontSize(16); padding-bottom:20px; padding-left:40px;}
+				ul{margin-left:19px;
+					li{float:left; width:207px; height:233px; background:url(../_img/dergi-bos-sayi.png) 0 0 no-repeat; margin:0 -15px 40px 0; position:relative;
+						a{display:block; position:absolute; z-index:2;}
+						p{@include fontSize(30); color:#d9d9d9; margin:70px 0 0 50px; padding-left:0;}
+						span{@include fontSize(56); color:#d9d9d9; margin-left:50px;}
+					}
+				}
+			}
+		}
+		#googleMap{width:1020px; height:400px; margin-bottom:40px;
+			.infobox{background:#fff; padding:20px; box-shadow:6px 6px 6px rgba(0, 0, 0, 0.5);
+				span{display:block; @include fontSize(13); line-height:18px; padding-bottom:10px;}
+				.title{color:$red; @include fontSize(15); padding-bottom:15px; @include ProximaBoldCond;}
+				.spanArrow{width:14px; height:7px; display:block; background:url(../_img/map-box-bg.png) 0 0 no-repeat; position:absolute; bottom:-7px; left:50%; margin-left:-7px; padding:0;}
+			}
+		}
+		.iletisim-adresler{width:1040px; margin-bottom:70px;
+			.iletisim-adres{width:240px; margin-right:20px; float:left;
+				h5{color:$red; @include fontSize(15); padding-bottom:20px;}
+				p{padding-left:20px; padding-bottom:10px !important;}
+				.ia-pin{@include sprite(0, -4638px);}
+				.ia-tel{@include sprite(0, -4690px);}
+				.ia-fax{@include sprite(0, -4742px);}
+				.ia-mail{@include sprite(0, -4792px);
+					a{@include fontSize(14); color:#535353; font-weight:normal;}
+				}
+				.gmap-link{@include fontSize(12); color:#1862ab; text-decoration:underline;}
+			}
+		}
+		.iletisim-table{
+			th{background:#e7eff6; text-align:left; width:25%; padding:12px 0 12px 25px; @include ProximaBoldCond; color:#1862ab; @include fontSize(16);}
+			td{text-align:left; padding:12px 0 12px 25px; color:#535353; @include fontSize(13); font-weight:normal;
+				a{color:#535353; text-decoration:underline;}
+			}
+			tr.dark td{background:#e7eff6;}
+		}
+	}
+	#organizasyon{position:relative; height:1540px;
+		&:before{width:100%; height:100%; position:absolute; top:0; left:0; content:""; background:url(../_img/organizasyon-lines.png) 78px 114px no-repeat; opacity:0;  @include transition(all 1s ease 2s);}
+		.level{top:0; position:absolute; height:80px; width:100%;  @include transition(all 1s ease 0s);
+			.org-box{top:0; width:80px; height:80px; position:absolute; background-repeat:no-repeat; background-position:0 0; @include radius(50px); @include transition(all 1s ease 1s);
+				&.org-multi{@include sprite(13px, -4938px);}
+				&.org-single{@include sprite(24px, -4847px);}
+				&.org-multi, &.org-single{
+					&.org-red{background-color:$red;}
+					&.org-blue{background-color:#1862ab;}
+					&.org-grey-1{background-color:#bbb;}
+					&.org-grey-2{background-color:#666;}
+					&.org-grey-3{background-color:#818181;}
+					&.org-grey-4{background-color:#999;}
+				}
+				&.org-col-1{left:50%; margin-left:-40px;}
+				&.org-col-2{left:50%; margin-left:-40px;}
+				&.org-col-3{left:50%; margin-left:-40px;}
+				&.org-col-4{right:50%; margin-right:-40px;}
+				&.org-col-5{right:50%; margin-right:-40px;}
+				a{display:block; text-align:center; color:#6e6e6e; @include fontSize(13); margin:90px 0 0 -50%; width:165px; opacity:0; @include transition(all 1s ease 2s);}
+			}
+		}
+	}
+	
+}
+
+.csstransitions, .no-csstransitions{
+	#leftPart{
+		#organizasyon{
+			&:before{opacity:1;}
+			.level{
+				&.level-1{top:(0*140)+px;}
+				&.level-2{top:(1*140)+px;}
+				&.level-3{top:(2*140)+px;}
+				&.level-4{top:(3*140)+px;}
+				&.level-5{top:(4*140)+px;}
+				&.level-6{top:(5*140)+px;}
+				&.level-7{top:(6*140)+px;}
+				&.level-8{top:(7*140)+px;}
+				&.level-9{top:(8*140)+px;}
+				&.level-10{top:(9*140)+px;}
+				&.level-11{top:(10*140)+px;}
+			}
+			.org-box{top:auto; margin:0 !important;
+				&.org-col-1{left:40px;}
+				&.org-col-2{left:160px;}
+				&.org-col-3{left:310px;}
+				&.org-col-4{right:160px;}
+				&.org-col-5{right:40px;}
+				a{opacity:1;}
+			}
+		}
+	}
+}
+#rightPart{width:280px; float:left;
+	.box{height:auto;
+		h2{color:$black;}
+	}
+	
+	#rightMenu{
+		> ul{margin-bottom:10px;
+			 > li{
+				 > a{@include ProximaBoldCond; @include fontSize(15); color:$x94; padding-top:15px; margin-top:16px; border-top:1px solid #d8d8d8; display:block; line-height:12px;
+					&:hover, &.on{color:#1862ab;}
+				}
+				&:first-child a{margin-top:0; padding-top:0; border-top:0 none;}
+				.sub-menu{border-top:1px solid #d8d8d8; margin-top:15px;
+					li{
+						a{@include sprite(0, -3398px); @include ProximaBoldCond; @include fontSize(15); color:$x94; display:block; padding-left:20px; margin-top:20px;
+							&:hover, &.on{color:#1862ab;}
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	#hizliErisim{
+		h2{margin:-20px -20px 20px -20px; background:url(../_img/repeat-border.gif) 0 0 repeat; padding:15px 20px; line-height:10px;}
+		ul{
+			li{padding-top:10px;
+				&:first-child{padding-top:0;}
+				a{color:$x39; @include fontSize(13); display:inline-block; padding-right:30px; background:url(../_img/ekonomi-ok.png) right center no-repeat;
+					&:hover{color:$red;}
+				}
+			}
+		}
+	}
+	#etiketler{
+		#tagBox{text-align:center;
+			a{color:$x39; display:inline-block; padding-bottom:5px; margin:0 10px 5px 10px; line-height:20px; background:url(../_img/wide-list-underline.gif) 0 bottom repeat-x;
+				&:hover{color:$blue;}
+				&.level-1{@include fontSize(15);}
+				&.level-2{@include fontSize(20);}
+				&.level-3{@include fontSize(25);}
+				&.level-4{@include fontSize(30);}
+				&.level-5{@include fontSize(35);}
+			}
+		}
+	}
+	
+}
+
+/*Real Code Ends*/
+
+/*IE Fixes Start*/
+
+.ie7{
+	#logo{margin-bottom:-3px;}
+	#english p{line-height:16px;}
+	#menuAndSearch #menu > li .subMenu ul{width:555px;}
+	.box .box-slide-nav li{height:6px;}
+	#Duyurular .duyuru p{line-height:15px;}
+	#Duyurular .duyuru span{line-height:15px;}
+	.day-number{line-height:14px; padding-top:0; padding-bottom:3px;}
+	#BuHafta ul li a{line-height:16px;}
+	#footerSub #footerText p{line-height:14px;}
+	#leftPart #contentArea #pageSection #pageInfo #breadCrumb li a{line-height:16px;}
+	#rightPart #hizliErisim ul li a{line-height:16px;}
+	#organizasyon span{background-image:url(../_img/mask-80.png); width:80px; height:80px; display:block; position:absolute; top:0; left:0;}
+}
+
+/*IE Fixes End*/
+
+/*Media Queires Start*/
+@media only screen and (max-width:1179px){
+	body > #mainCapsule{width:880px;}
+	#headerCapsule{padding:20px;
+		header{width:880px;}
+	}
+	#contentCapsule{width:880px;}
+	#menuAndSearch{
+		#search{right:20px;}
+		#topMenu{right:300px;}
+		#menu{
+			> li{width:14% !important;
+				&#mnUyeFirmalar a{background:none; padding:16px 0 15px 0;}
+				&#mnMeslekKomiteleri a,{padding:6px 0;}
+			}
+		}
+	}
+	.grid_1{width:31.8181818181%;
+		&.grid02{margin:0 10px 0 0 !important;}
+		&.grid03{margin:0 10px !important;}
+		&.grid04{margin:0 0 0 10px !important;}
+		&.grid05{float:right !important; margin-right:0 !important;}
+		&.grid06{margin-right:10px !important;}
+	}
+	.grid_2{width:100%;}
+	.grid_3{width:100%;}
+	
+	#Banner img{width:100%; height:100%; margin:0;}
+	
+	#footerContainer{width:880px;
+		.onlineHizmetler{
+			.ohWrap{
+				.ohMenu{width:880px;
+					li{width:25% !important;
+						a{@include fontSize(14); line-height:1.5em;}
+					}
+				}
+			}
+		}
+	}
+	
+	#footerLinks ul li{margin-bottom:20px;}
+	
+	#footerCapsule{width:880px;}
+	#footerMenu{
+		ul{
+			li{width:20% !important;
+				ul{display:none;}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:320px) and (orientation:portrait){
+	body{background:none;}
+	body > #mainCapsule{width:320px;}
+	.responsive{display:block;}
+	.grid{float:none !important; width:280px !important; margin:0 20px !important;
+		&.grid01{margin:0 !important; width:320px !important;}
+		&.grid02, &.grid03, &.grid04{margin:0 20px !important;}
+		&.grid05{float:none !important;}
+		&.grid08{margin:0 !important; width:100% !important;
+			.box{padding:0;
+				&#Banner{height:120px;
+					img{width:100%; height:120px;}
+				}
+			}
+		}
+	}
+	
+	#headerCapsule{height:100px; z-index:10; width:280px;
+		#header{width:280px;}
+	}
+	
+	#logo a{background:url(../_img/logo@2.png) 0 0 no-repeat; background-size:97% auto;}
+	
+	#english{width:100px;
+		p{line-height:15px;}
+	}
+	#contentCapsule{width:320px;}
+	#menuAndSearch{width:130px; float:right; clear:none; margin-top:25px;
+		#menu, #topMenu, #search{display:none;}
+		#menuExpand{width:90px; height:10px; display:block; background:$red; @include ProximaBoldCond; @include fontSize(19); color:$white; padding:20px; line-height:10px; position:relative;
+			&:after{width:50px; height:50px; display:block; content:""; position:absolute; top:0; right:0; @include sprite(14px, -2840px);  background-color:#c31c23;}
+		}
+		.responsive{display:none;}
+		&.on{width:210px; padding:20px; background:#c31c23; position:absolute; top:0; right:0; z-index:10; float:none; margin:0;
+			.responsive, #menu, #topMenu, #search{display:block;}
+			#menuExpand{text-indent:-9999px; width:50px; height:50px; padding:0; @include sprite(14px, -2922px); background-color:#c31c23; position:absolute; left:-70px; top:70px;
+				&:after{display:none;}	
+			}
+			#menu{height:auto;padding:30px 0 40px 0;
+				li{float:none; width:100% !important; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #b01a21; background:none;
+					a{text-align:left; padding:0;}
+					&#mnMeslekKomiteleri a{padding:0;}
+					&#mnUyeFirmalar{border-bottom:0 none;
+						a{padding:0;}
+					}
+					&:hover, &.on{background-color:#c31c23;
+						.subMenu{display:none;}
+					}
+				}
+			}
+			.responsive{
+				a{width:105px; height:40px; padding-top:15px; display:block; text-align:center; @include ProximaBoldCond; @include fontSize(15); color:$white; float:left;}
+				.onlineHizmetler{background-color:#881418; border-bottom:5px solid #7a1216;}
+				.hizliErisim{background-color:#404040; border-bottom:5px solid #393939;}
+			}
+			#topMenu{position:static; margin:20px 0;
+				li{
+					a{padding:0; height:auto; color:$white; @include ProximaBoldCond;}
+					&#tmnBilgiEdinme, &#tmnBasin, &#tmnIletisim{
+						a{background:none; line-height:20px;}
+					}
+					&#tmnBasin a{padding:0 12px; margin:0 11px; border-left:1px solid #af191f; border-right:1px solid #af191f;}
+				}
+			}
+			#search{position:static; width:206px; border-color:#8c282c; background-position:174px -410px; background-color:$white;
+				input{width:150px;}
+			}
+		}
+	}
+	
+	#AnaHaberler{height:220px; overflow:hidden; width:320px;
+		#HaberListe{display:none;}
+		#bb-bookblock{margin:0; float:none; width:2880px; height:220px; position:absolute; top:0; left:0; z-index:8;
+			.bb-item{height:220px; float:left; width:320px; display:block; position:relative;}
+			.bb-item-inner{height:220px;
+				img{height:220px;}
+				.bb-text{@include fontSize(20); left:20px; width:140px; padding:0 140px 0 0; background-position:237px -3652px;}
+			}
+		}
+	}
+	#content{padding-bottom:0;}
+	#footerContainer, #footerCapsule{width:100%;}
+	#footerCapsule{padding-bottom:20px;}
+	#footerLinks{margin-bottom:10px; padding-bottom:0; border-bottom:0 none;
+		ul{
+			li{float:none; width:280px !important; margin:0 20px 10px 20px; padding:0;
+				a{padding-left:80px;}
+			}
+		}
+	}
+	#footerMenu{display:none;}
+	#footerSub{margin-top:0;
+		#footerLogos{float:none !important;
+			ul li{margin-left:0; margin-right:25px;}
+		}
+		#footerText{float:none; padding-top:20px;
+			ul li{float:none; padding-bottom:10px;}
+			#gricreative{top:auto; bottom:20px; right:20px;}
+		}
+	}
+	
+	#stickyFooter{position:static; height:80px; padding:20px; width:280px;
+		.onlineHizmetler{display:none;}
+		#social{float:none; width:auto;
+			#eBultenBox{float:none; margin-bottom:20px;}
+			ul{float:none;}
+		}
+	}
+}
+
+/*Media Queires End*/
