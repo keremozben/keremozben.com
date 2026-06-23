@@ -309,6 +309,23 @@ ul {
   margin-bottom: var(--spacing-sm);
 }
 
+.early-career-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-md) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.early-career-list li {
+  margin-bottom: 3px;
+}
+
+.early-career-list strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
 /* --- Footer --- */
 .cv-footer {
   margin-top: var(--spacing-2xl);

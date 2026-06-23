@@ -100,6 +100,22 @@
     margin-bottom: 3pt;
   }
 
+  .early-career-list {
+    list-style: none;
+    padding: 0;
+    margin: 2pt 0 4pt 0;
+    font-size: 8.5pt;
+    color: #1a1a1a;
+  }
+
+  .early-career-list li {
+    margin-bottom: 1pt;
+  }
+
+  .early-career-list strong {
+    font-weight: 600;
+  }
+
   /* --- Sections --- */
   .cv-section {
     margin-bottom: 8pt;
@@ -114,9 +130,12 @@
   }
 
   /* --- Skills --- */
+  /* Single column for the printed/PDF version: ATS parsers read PDFs by
+     position and can interleave multi-column layouts, scrambling the skills.
+     A single column guarantees a clean, linear reading order. */
   .skills-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 3pt 16pt;
+    grid-template-columns: 1fr;
+    gap: 4pt 0;
   }
 
   .skills-group {
