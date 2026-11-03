@@ -302,6 +302,52 @@ ul {
   color: var(--color-border);
 }
 
+/* --- Store Badges ---
+   Official, unmodified artwork from Apple (toolbox.marketingtools.apple.com)
+   and Google (play.google.com/intl/en_us/badges). Both badges render at the
+   same visible height (40px, Apple's on-screen minimum) with at least a
+   quarter of that height (10px) as clear space around them.
+   The Google PNGs ship with transparent padding, so they are scaled up until
+   their black area is 40px tall and the padding is cancelled with negative
+   margins (the image itself is left untouched). Numbers come from the files:
+   EN 646x250, black area x 41-604, y 41-208 (168px tall);
+   TR 646x250, black area x 0-645, y 29-220 (192px tall). */
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.store-badge {
+  display: block;
+  line-height: 0;
+}
+
+.store-badge:hover {
+  text-decoration: none;
+}
+
+.store-badge__img {
+  display: block;
+  width: auto;
+}
+
+.store-badge__img--app-store {
+  height: 40px;
+}
+
+.store-badge__img--google-play-en {
+  height: calc(40px * 250 / 168);
+  margin: calc(-40px * 41 / 168);
+}
+
+.store-badge__img--google-play-tr {
+  height: calc(40px * 250 / 192);
+  margin: calc(-40px * 29 / 192) 0;
+}
+
 .early-career-companies {
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
