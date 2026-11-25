@@ -182,6 +182,22 @@
     margin-bottom: 0;
   }
 
+  .experience-header__title {
+    gap: 4pt;
+  }
+
+  .app-icon {
+    width: 16pt;
+    height: 16pt;
+  }
+
+  .experience-intro {
+    margin-bottom: 5pt;
+    font-size: 8.5pt;
+    line-height: 1.3;
+    color: #1a1a1a;
+  }
+
   .experience-meta {
     font-size: 8pt;
   }
